@@ -1,0 +1,6 @@
+#!/bin/bash
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+sleep 10
+Health=$(perl -e "printf \"%19b\n\", $(vcgencmd get_throttled | cut -f2 -d=)")
+grep -q 1 <<<${Health} && echo -e "$(date)\t$(printf "%019d" ${Health})" >>/var/log/raspihealth.log
+exit 0

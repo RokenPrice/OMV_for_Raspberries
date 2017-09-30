@@ -1,0 +1,12 @@
+Package: firmware-brcm80211 libraspberrypi-bin libraspberrypi0 raspberrypi-bootloader raspberrypi-kernel
+Pin: release n=stretch, origin archive.raspberrypi.org
+Pin-Priority: 1000
+
+Package: *
+Pin: release n=stretch, origin archive.raspberrypi.org
+Pin-Priority: 490
+
+Package: *
+Pin: release n=jessie, origin httpredir.debian.org
+Pin-Priority: 500
+
