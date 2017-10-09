@@ -258,6 +258,7 @@ case "$1" in
 
 	esac
 
+	chage -d 0 root
 	mv /usr/bin/newaliases.bak /usr/bin/newaliases 
 	export DEBIAN_FRONTEND=noninteractive 
 	apt-get install -f || exit 0 
